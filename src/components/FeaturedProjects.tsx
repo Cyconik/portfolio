@@ -6,39 +6,46 @@ import { projectsData } from '../data/projects';
 export const FeaturedProjects: React.FC = () => {
   const [filter, setFilter] = useState<string>('All');
 
-  const categories = ['All', 'Mobile & Systems', 'Automation & Python', 'Web Tools', 'WordPress Plugins'];
+  const categories = [
+    'All',
+    'WordPress Plugins',
+    'Chrome Extensions',
+    'Automation & Python',
+    'Mobile & Systems',
+    'Client Web Platforms'
+  ];
 
   const filteredProjects = filter === 'All'
     ? projectsData
     : projectsData.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-20 bg-white border-b border-slate-200/60">
+    <section id="projects" className="py-16 sm:py-20 bg-white border-b border-slate-200/60 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12 space-y-3">
+        <div className="max-w-3xl mx-auto text-center mb-10 sm:mb-12 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-xs font-semibold text-blue-700 uppercase tracking-wider">
-            Engineered Works
+            Engineered Tools & Systems
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">
-            Featured Projects & Open Source
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 tracking-tight">
+            Featured Projects, Plugins & Extensions
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
-            Practical, high-utility systems spanning mobile mesh networks, Python automation, and web optimization.
+          <p className="text-slate-600 text-sm sm:text-base lg:text-lg">
+            High-utility software spanning WordPress plugins, Chrome extensions, anti-blocking scrapers, and automated client web systems.
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* Category Filters (Mobile Scrollable) */}
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-10">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
+              className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-colors ${
                 filter === cat
-                  ? 'bg-navy-900 text-white'
-                  : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+                  ? 'bg-navy-900 text-white shadow-sm'
+                  : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200/80'
               }`}
             >
               {cat}
@@ -47,18 +54,18 @@ export const FeaturedProjects: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-subtle hover:shadow-card hover:border-slate-300 transition-all flex flex-col justify-between group"
+              className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-subtle hover:shadow-card hover:border-slate-300 transition-all flex flex-col justify-between group"
             >
               {/* Card Top */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 
                 {/* Meta Header */}
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
                     {project.category}
                   </span>
                   
@@ -89,7 +96,7 @@ export const FeaturedProjects: React.FC = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-navy-900 group-hover:text-blue-700 transition-colors leading-snug">
+                <h3 className="text-base sm:text-lg font-bold text-navy-900 group-hover:text-blue-700 transition-colors leading-snug">
                   {project.title}
                 </h3>
 
@@ -103,19 +110,19 @@ export const FeaturedProjects: React.FC = () => {
                   {project.highlights.map((h, hIdx) => (
                     <li key={hIdx} className="flex items-start gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0 mt-0.5" />
-                      <span>{h}</span>
+                      <span className="leading-snug">{h}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Card Bottom: Tech Pills & Action Links */}
-              <div className="pt-6 mt-6 border-t border-slate-100 space-y-4">
+              <div className="pt-5 mt-5 border-t border-slate-100 space-y-3">
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-700"
+                      className="text-[10px] sm:text-[11px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/50"
                     >
                       {tech}
                     </span>
@@ -130,7 +137,7 @@ export const FeaturedProjects: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800"
                     >
-                      <span>Inspect Repository</span>
+                      <span>GitHub Source</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   ) : project.liveUrl ? (
@@ -140,7 +147,7 @@ export const FeaturedProjects: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-blue-700 hover:text-blue-800"
                     >
-                      <span>Visit Live Demo</span>
+                      <span>Explore Live Tool</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   ) : (

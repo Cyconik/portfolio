@@ -17,27 +17,28 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 animate-in fade-in">
-      <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-2 sm:p-6 animate-in fade-in">
+      <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[94vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
         
         {/* Modal Toolbar */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 bg-slate-50/80">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-navy-900 text-sm sm:text-base">
-              Nikhil Kumar Singh — Official Curriculum Vitae
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-200 bg-slate-50/90 flex-shrink-0">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="font-extrabold text-navy-900 text-xs sm:text-base truncate">
+              {profileData.fullName} — Official Curriculum Vitae
             </span>
-            <span className="text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-medium">
+            <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold flex-shrink-0">
               Verified 2026
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 transition-colors shadow-subtle"
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 transition-colors shadow-subtle"
             >
               <Printer className="w-3.5 h-3.5 text-slate-600" />
-              <span>Print / Save PDF</span>
+              <span className="hidden sm:inline">Print / Save PDF</span>
+              <span className="sm:hidden">Print</span>
             </button>
             <button
               onClick={onClose}
@@ -49,20 +50,20 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         </div>
 
         {/* Printable & Scrollable Resume Body */}
-        <div className="overflow-y-auto p-6 sm:p-10 space-y-8 text-slate-800 text-sm leading-relaxed font-sans">
+        <div className="overflow-y-auto p-4 sm:p-10 space-y-6 sm:space-y-8 text-slate-800 text-xs sm:text-sm leading-relaxed font-sans">
           
           {/* Header */}
-          <div className="text-center border-b border-slate-200 pb-6 space-y-2">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
+          <div className="text-center border-b border-slate-200 pb-5 sm:pb-6 space-y-2">
+            <h1 className="text-xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
               {profileData.fullName.toUpperCase()}
             </h1>
-            <p className="text-sm sm:text-base font-semibold text-blue-800 tracking-wide">
-              BUSINESS ANALYST | PRODUCT & OPERATIONS ANALYST | SOFTWARE DEVELOPER
+            <p className="text-xs sm:text-base font-bold text-blue-800 tracking-wide">
+              BUSINESS ANALYST | PRODUCT OWNER | FULL-STACK DEVELOPER
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-slate-600 font-medium pt-1">
-              <span>{profileData.phone}</span>
-              <span>•</span>
-              <span>{profileData.email}</span>
+              <a href={`mailto:${profileData.email}`} className="text-blue-700 font-semibold hover:underline">
+                {profileData.email}
+              </a>
               <span>•</span>
               <a href={profileData.github} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:underline">
                 github.com/{profileData.handle}
@@ -78,7 +79,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               Professional Summary
             </h2>
             <p className="text-xs sm:text-sm text-slate-700 leading-normal">
-              {profileData.shortBio} Skilled in requirement gathering, BRD/FRD, user stories, acceptance criteria, process flows, gap analysis, RTM, and UAT. Experienced in coordinating with vendors and cross-functional teams, administering CRM workflows, and translating operational needs into clear functional requirements. Combines business analysis capabilities with technical knowledge of WordPress, PHP, MySQL, APIs, Flutter, and Python. Contributed to increasing Turbo Auto Parts' organic traffic from approximately 1,570 to 17,700 monthly sessions in four months (+1,027% organic scale).
+              {profileData.shortBio} Skilled in requirement gathering, BRD/FRD, user stories, acceptance criteria, process flows, gap analysis, RTM, and UAT. Experienced in coordinating with vendors and cross-functional teams, administering CRM workflows, and translating operational needs into clear functional requirements. Combines business analysis capabilities with technical knowledge of WordPress, PHP, MySQL, APIs, Flutter, and Python. Contributed to increasing Turbo Auto Parts' organic traffic from approximately 1,570 to 17,700 monthly sessions in four months (+1,027% organic scale). Founder of Bargenify, ScanSecure, SpillX, and Galigram.
             </p>
           </div>
 
@@ -135,31 +136,35 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             ))}
           </div>
 
-          {/* Products & Independent Projects */}
+          {/* Ventures & Products */}
           <div className="space-y-2">
             <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
-              Products & Independent Projects
+              Ventures & Built Products
             </h2>
             <div className="space-y-2 text-xs">
               <div>
-                <strong className="text-slate-900 font-semibold">ScanSecure (scansecure.in) — Founder:</strong>
+                <strong className="text-slate-900 font-bold">Bargenify (bargenify.com) — Founder & Architect:</strong>
+                <span className="text-slate-700 ml-1">India's 1st online bargaining platform. Developing plugin & API infrastructure for e-commerce shop owners to enable real-time price negotiations.</span>
+              </div>
+              <div>
+                <strong className="text-slate-900 font-bold">ScanSecure (scansecure.in) — Founder:</strong>
                 <span className="text-slate-700 ml-1">Emergency smart-card platform using a QR-enabled PVC card to make vital emergency information and contacts accessible from any phone without an app or login.</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-semibold">SpillX (spillx.in) — Founder:</strong>
-                <span className="text-slate-700 ml-1">Anonymous social platform for text confessions, emotional reactions, and anonymous one-to-one conversations.</span>
+                <strong className="text-slate-900 font-bold">Galigram (galigram.com) — Founder:</strong>
+                <span className="text-slate-700 ml-1">Location-aware social platform for concise 30-second hyper-local video reports and community updates (under process).</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-semibold">Galigram (galigram.com) — Product Builder:</strong>
-                <span className="text-slate-700 ml-1">Location-aware social information platform for concise 30-second video reports and hyper-local discovery (scheduled global launch Jan 2027).</span>
+                <strong className="text-slate-900 font-bold">WebPConverter.tech — Creator:</strong>
+                <span className="text-slate-700 ml-1">Batch image conversion and compression platform that reduces file sizes by up to 90% without losing quality, with REST API and WP plugin.</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-semibold">QuickChat (github.com/Cyconik/QuickChat) — Developer:</strong>
-                <span className="text-slate-700 ml-1">Open-source offline Android messenger using Bluetooth Low Energy mesh communication and multi-hop message relaying.</span>
+                <strong className="text-slate-900 font-bold">SpillX (spillx.in) — Founder:</strong>
+                <span className="text-slate-700 ml-1">Anonymous social expression platform for text confessions, reactions, and private one-to-one discussions.</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-semibold">WebPConverter.tech — Creator:</strong>
-                <span className="text-slate-700 ml-1">Client-side batch image conversion/compression platform, REST API, and WordPress/WooCommerce plugin.</span>
+                <strong className="text-slate-900 font-bold">CyberZip Tools (Universal Reblog, Element Inspector, Bulk Mailer, Leads Scraper):</strong>
+                <span className="text-slate-700 ml-1">Suite of production tools for content distribution, DOM inspection, spam-free email outreach, and block-free B2B prospecting.</span>
               </div>
             </div>
           </div>

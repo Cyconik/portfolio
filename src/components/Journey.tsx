@@ -14,6 +14,18 @@ interface TimelineEvent {
 export const Journey: React.FC = () => {
   const events: TimelineEvent[] = [
     {
+      year: '2025 – Present',
+      title: 'Founder & Architect: Bargenify.com',
+      subtitle: "India's 1st Online Bargaining Platform for E-Commerce Merchants",
+      organization: 'Bargenify',
+      type: 'venture',
+      highlights: [
+        'Architecting digital negotiation plugins and APIs for online shop owners.',
+        'Digitizing retail price bargaining to increase e-commerce conversion rates.',
+        'Protecting merchant profit margins through automated algorithmic threshold controls.'
+      ]
+    },
+    {
       year: 'Dec 2024 – Present',
       title: 'Business Analyst',
       subtitle: 'Operational requirements, Perfex CRM customization & vendor management',
@@ -41,14 +53,15 @@ export const Journey: React.FC = () => {
     },
     {
       year: '2023 – 2024',
-      title: 'Ventures: ScanSecure, QuickChat & SpillX',
-      subtitle: 'Independent product development & ecosystem building',
-      organization: 'Founder / Product Builder',
+      title: 'Ventures: ScanSecure, SpillX & Galigram',
+      subtitle: 'Founder of independent digital products & emergency card ecosystem',
+      organization: 'Founder / Product Architect',
       type: 'venture',
       highlights: [
         'Founded ScanSecure: QR-enabled PVC emergency medical card ecosystem with zero-app access.',
-        'Developed QuickChat: Open-source offline Bluetooth Low Energy (BLE) multi-hop Android messenger.',
-        'Founded SpillX: Anonymous social confession and emotional support platform.'
+        'Founded Galigram: Location-aware hyper-local micro-video social platform (under process).',
+        'Founded SpillX: Anonymous social confession and emotional expression community.',
+        'Created WebPConverter.tech: Slashes image payloads up to 90% without quality loss.'
       ]
     },
     {
@@ -114,29 +127,29 @@ export const Journey: React.FC = () => {
   ];
 
   return (
-    <section id="journey" className="py-20 bg-slate-50 border-b border-slate-200/60">
+    <section id="journey" className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200/60 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 space-y-3">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 text-xs font-semibold text-slate-800 uppercase tracking-wider">
             Career Evolution
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-navy-900 tracking-tight">
             My Professional Journey
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg">
-            A continuous trajectory of technical discipline, product delivery, and business analysis impact.
+          <p className="text-slate-600 text-sm sm:text-base lg:text-lg">
+            A continuous trajectory of engineering discipline, technical execution, and business analysis impact.
           </p>
         </div>
 
-        {/* Timeline Component */}
-        <div className="max-w-4xl mx-auto relative">
+        {/* Timeline Component - Fully Mobile Responsive */}
+        <div className="max-w-4xl mx-auto relative px-2 sm:px-0">
           
-          {/* Vertical Center/Left Spine Line */}
-          <div className="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-slate-200 -translate-x-1/2" />
+          {/* Vertical Spine: Left on mobile, center on sm+ */}
+          <div className="absolute left-6 sm:left-1/2 top-4 bottom-4 w-0.5 bg-slate-200 -translate-x-1/2" />
 
-          <div className="space-y-8 sm:space-y-12">
+          <div className="space-y-6 sm:space-y-12">
             {events.map((event, idx) => {
               const isEven = idx % 2 === 0;
               return (
@@ -148,7 +161,7 @@ export const Journey: React.FC = () => {
                 >
                   
                   {/* Timeline Node Icon */}
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-600 flex items-center justify-center shadow-sm z-10">
+                  <div className="absolute left-6 sm:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-blue-600 flex items-center justify-center shadow-sm z-10">
                     {event.type === 'career' ? (
                       <Briefcase className="w-3.5 h-3.5 text-blue-600" />
                     ) : event.type === 'education' ? (
@@ -158,27 +171,27 @@ export const Journey: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Content Card */}
-                  <div className="ml-12 sm:ml-0 sm:w-1/2 sm:px-6 w-full">
-                    <div className="bg-white border border-slate-200/90 rounded-xl p-5 shadow-subtle hover:shadow-card transition-all group">
+                  {/* Content Card with proper padding on mobile */}
+                  <div className="pl-12 sm:pl-0 sm:w-1/2 sm:px-6 w-full">
+                    <div className="bg-white border border-slate-200/90 rounded-xl p-4 sm:p-5 shadow-subtle hover:shadow-card transition-all group">
                       
                       {/* Event Meta Header */}
-                      <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <div className="flex flex-wrap items-center justify-between gap-1.5 mb-2">
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-slate-100 text-slate-700">
                           <Calendar className="w-3 h-3 text-slate-500" />
                           {event.year}
                         </span>
-                        <span className="text-xs font-medium text-slate-500 flex items-center gap-1">
+                        <span className="text-[11px] sm:text-xs font-medium text-slate-500">
                           {event.organization}
                           {event.location && ` • ${event.location}`}
                         </span>
                       </div>
 
                       {/* Event Title */}
-                      <h3 className="text-base sm:text-lg font-bold text-navy-900 group-hover:text-blue-700 transition-colors">
+                      <h3 className="text-sm sm:text-base font-bold text-navy-900 group-hover:text-blue-700 transition-colors">
                         {event.title}
                       </h3>
-                      <p className="text-xs sm:text-sm font-medium text-slate-600 mt-0.5">
+                      <p className="text-xs sm:text-sm font-medium text-slate-600 mt-0.5 leading-snug">
                         {event.subtitle}
                       </p>
 

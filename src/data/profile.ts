@@ -5,10 +5,8 @@ export interface ProfileData {
   title: string;
   tagline: string;
   location: string;
-  phone: string;
   email: string;
   github: string;
-  linkedin: string;
   portfolioUrl: string;
   avatarUrl: string;
   shortBio: string;
@@ -22,24 +20,22 @@ export interface ProfileData {
 }
 
 export const profileData: ProfileData = {
-  name: "Nikhil Singh",
+  name: "Nikhil Kumar Singh",
   fullName: "Nikhil Kumar Singh",
   handle: "Cyconik",
-  title: "Business Analyst & Digital Product Builder",
-  tagline: "Software Developer | Business Analyst | Product Builder | Entrepreneur",
+  title: "Business Analyst • Product Owner • Digital Product Builder",
+  tagline: "Software Developer | Business Analyst | Product Owner | Tech Entrepreneur",
   location: "Noida, Uttar Pradesh, India",
-  phone: "+91 6388693276",
-  email: "contact@cyconik.com", // [Phase 2 placeholder: Replace with primary professional email address if desired]
+  email: "cyco2052544@gmail.com",
   github: "https://github.com/Cyconik",
-  linkedin: "https://linkedin.com/in/nikhil-singh", // [Phase 2 placeholder: Verify vanity LinkedIn username]
-  portfolioUrl: "https://cyconik.github.io",
+  portfolioUrl: "https://cyconik.github.io/portfolio/",
   avatarUrl: "https://avatars.githubusercontent.com/u/110342938?v=4",
-  shortBio: "Business Analyst and Product Builder with 4 years of experience across requirement engineering, digital product delivery, workflow improvement, cross-functional vendor coordination, and web architectures.",
+  shortBio: "Business Analyst and Product Builder with 4 years of experience across requirement engineering, digital product delivery, workflow improvement, cross-functional vendor coordination, and web architectures. Founder of ScanSecure, SpillX, Galigram, and architect of Bargenify (India's 1st online bargaining platform).",
   fullStory: [
-    "My journey began at the intersection of engineering discipline and hands-on systems thinking. Having trained in Aircraft Maintenance Engineering with an 80% distinction, I developed a meticulous attention to detail, protocol safety, and complex system architectures before completing my B.Tech in Computer Science and Engineering at Dr. APJ Abdul Kalam Technical University (AKTU).",
+    "My journey began at the intersection of engineering discipline and hands-on systems thinking. Having trained in Aircraft Maintenance Engineering with an 80% distinction, I developed a meticulous attention to detail, protocol safety, and complex system diagnostics before completing my B.Tech in Computer Science and Engineering at Dr. APJ Abdul Kalam Technical University (AKTU).",
     "Over the past 4 years, I have operated across the entire product lifecycle—from conducting deep stakeholder interviews, authoring BRD/FRD artifacts, and mapping user journeys, to rolling up my sleeves in code, managing MySQL relational databases, custom CRM modules, and high-converting web systems.",
     "At Creative Tura, I led digital strategy and technical SEO for Turbo Auto Parts, driving organic monthly sessions from ~1,570 to 17,700 in just four months (+1,027% organic growth). Today at Opalspace, I bridge operational requirements and technical execution, optimizing Perfex CRM workflows and cross-functional delivery.",
-    "As an entrepreneur, I believe the best solutions solve acute, real-world friction. Whether building ScanSecure (an offline QR-enabled emergency card ecosystem), QuickChat (a 100% offline BLE mesh network messenger for zero-connectivity scenarios), or Galigram (a hyper-local 30-second video discovery platform), I focus on building technology that delivers tangible human utility."
+    "As an entrepreneur, I build technology that solves acute market friction: from founding ScanSecure (a QR-enabled emergency card ecosystem) and SpillX (an anonymous social sanctuary), to founding Galigram (a location-aware hyper-local micro-video platform). Currently, I am pioneering Bargenify (bargenify.com)—India's 1st online bargaining platform—creating plugins and APIs for e-commerce merchants to enable digital price negotiations."
   ],
   philosophy: [
     "Requirements Before Code: Technology without a validated user problem is waste. Clear functional specifications, acceptance criteria, and stakeholder alignment form the foundation of successful software.",
@@ -58,14 +54,14 @@ export const profileData: ProfileData = {
       description: "Scaled from ~1,570 to 17,700 monthly sessions in 4 months"
     },
     {
-      label: "Products Founded & Built",
-      value: "6+",
-      description: "Including ScanSecure, QuickChat, SpillX & Galigram"
+      label: "Ventures Founded",
+      value: "5+",
+      description: "Bargenify, ScanSecure, SpillX, Galigram & WebPConverter"
     },
     {
-      label: "Client Industries Served",
-      value: "8+",
-      description: "Healthcare, e-commerce, logistics, travel & tech"
+      label: "Client Solutions Delivered",
+      value: "20+",
+      description: "Custom web applications & plugins built from scratch"
     }
   ]
 };

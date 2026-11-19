@@ -1,7 +1,7 @@
 export interface ProjectItem {
   id: string;
   title: string;
-  category: "Mobile & Systems" | "Automation & Python" | "Web Tools" | "WordPress Plugins";
+  category: "WordPress Plugins" | "Chrome Extensions" | "Automation & Python" | "Mobile & Systems" | "Client Web Platforms";
   description: string;
   longDescription: string;
   technologies: string[];
@@ -9,16 +9,80 @@ export interface ProjectItem {
   liveUrl?: string;
   downloadUrl?: string;
   isFeatured: boolean;
-  status: "Completed" | "Active" | "Open Source";
+  status: "Completed" | "Active" | "Open Source" | "Live Tool";
   highlights: string[];
 }
 
 export const projectsData: ProjectItem[] = [
   {
+    id: "universal-reblog",
+    title: "Universal Reblog & Republish — WordPress Plugin",
+    category: "WordPress Plugins",
+    description: "Empowers website visitors to reblog, share, and republish articles across 9+ platforms in 1-click with automated canonical backlink attribution.",
+    longDescription: "A zero-dependency WordPress plugin engineered to maximize viral content distribution. Allows readers to cross-publish articles while preserving the publisher's SEO equity through automated canonical headers and structured attribution links.",
+    technologies: ["PHP", "WordPress Hook System", "JavaScript", "SEO Canonical Architecture", "Social Graph APIs"],
+    liveUrl: "https://cyberzip.in/universal-reblog-republish/",
+    isFeatured: true,
+    status: "Live Tool",
+    highlights: [
+      "1-Click Social Sharing and multi-platform reblogging across 9+ networks.",
+      "Automated canonical attribution backlink injection to preserve SEO authority.",
+      "Zero third-party library dependencies for ultra-fast, lightweight page loads."
+    ]
+  },
+  {
+    id: "element-inspector",
+    title: "Element Inspector — Chrome Extension",
+    category: "Chrome Extensions",
+    description: "Lightweight browser extension for web developers and UI designers to inspect DOM elements, download high-res images, and copy text/CSS in 1-click.",
+    longDescription: "Engineered to eliminate friction during frontend development, UI auditing, and design recreation. Allows developers and designers to hover over any DOM element, inspect computed styles, download asset images directly, and extract clean text or URLs.",
+    technologies: ["Chrome Extensions API (Manifest V3)", "JavaScript (ES6+)", "CSS3", "DOM Mutation Observer"],
+    liveUrl: "https://cyberzip.in/element-inspector/",
+    isFeatured: true,
+    status: "Live Tool",
+    highlights: [
+      "Instant 1-click DOM inspection and computed style visualization.",
+      "Direct asset and image downloading from any webpage.",
+      "Zero data tracking and completely client-side browser execution."
+    ]
+  },
+  {
+    id: "bulk-mailer",
+    title: "Bulk Mailer — 100% Free & Spam-Free Outreach Tool",
+    category: "Automation & Python",
+    description: "Cold email outreach and campaign platform with 1-click Google Sheet sync, Gmail 16-character App Password support, and merge tags with zero limits.",
+    longDescription: "A high-deliverability outreach engine designed to help founders and sales professionals launch personalized cold campaigns with zero arbitrary paywalls. Features automated mail merge, custom SMTP endpoints, Gmail App Password integration, and bounce-safe throttling.",
+    technologies: ["Python", "SMTP / IMAP", "Google Sheets API", "HTML Email Engine", "Delivery Throttling"],
+    liveUrl: "https://cyberzip.in/bulk-mailer/",
+    isFeatured: true,
+    status: "Live Tool",
+    highlights: [
+      "100% lifetime free cold outreach with zero artificial limits.",
+      "1-Click Google Sheet synchronization and dynamic merge tags.",
+      "Built-in Gmail App Password authentication and spam-safe delivery delays."
+    ]
+  },
+  {
+    id: "leads-scraper",
+    title: "B2B Leads Scraper — 100% Block-Free Prospecting",
+    category: "Automation & Python",
+    description: "High-speed B2B and Google Maps lead generation scraper with anti-blocking request workflows and structured data extraction.",
+    longDescription: "Built to automate lead intelligence gathering without triggering anti-bot IP blocks. Uses randomized fingerprinting, intelligent request delays, and multi-field extraction to harvest verified business prospect records directly into clean spreadsheets.",
+    technologies: ["Python", "Web Scraping", "Anti-Bot Evasion", "pandas", "Google Maps Intelligence"],
+    liveUrl: "https://cyberzip.in/leads-scraper.php",
+    isFeatured: true,
+    status: "Live Tool",
+    highlights: [
+      "100% block-free scraping architecture designed for enterprise B2B lead generation.",
+      "Extracts phone numbers, business names, addresses, ratings, and websites.",
+      "Automated spreadsheet formatting with zero duplicates."
+    ]
+  },
+  {
     id: "quickchat",
     title: "QuickChat — 100% Offline BLE Mesh Messenger",
     category: "Mobile & Systems",
-    description: "Decentralized, 100% offline group messenger for Android using multi-hop Bluetooth Low Energy (BLE) phone-to-phone relaying with zero internet or cellular towers.",
+    description: "Decentralized, 100% offline group messenger for Android using multi-hop Bluetooth Low Energy (BLE) phone-to-phone relaying with zero internet or SIM card required.",
     longDescription: "QuickChat transforms nearby smartphones into an autonomous, decentralized communication mesh. With zero mobile data, SIM cards, or Wi-Fi required, messages broadcast across multi-hop peer nodes (Phone A -> Phone B -> Phone C -> Phone D) with local IndexedDB storage, real-time unread alerts, and group channels.",
     technologies: ["Dart", "Flutter", "Android BLE", "P2P Mesh Networking", "IndexedDB", "Packet Chunking"],
     githubUrl: "https://github.com/Cyconik/QuickChat",
@@ -45,67 +109,24 @@ export const projectsData: ProjectItem[] = [
     highlights: [
       "Automates submissions across LinkedIn Easy Apply, Indeed, Remotive, and Naukri.",
       "Extracts candidate skills and experience automatically from PDF and DOCX files.",
-      "Captures visual screenshot proof at every application stage (before, during, and after submission).",
-      "Sends automated HTML email summaries with success/failure metrics and downloadable spreadsheets."
+      "Captures visual screenshot proof at every application stage.",
+      "Sends automated HTML email summaries with success/failure metrics."
     ]
   },
   {
-    id: "webpconverter-tech",
-    title: "WebPConverter.tech — Image Compression Platform",
-    category: "Web Tools",
-    description: "Online image conversion and compression platform offering client-side batch processing, a dedicated REST API, and WordPress/WooCommerce plugin integrations.",
-    longDescription: "Engineered to solve Core Web Vitals image bloat across large web properties. Combines browser-level WebAssembly batch conversion to modern .webp format with automated lossless compression, developer REST endpoints, and CMS automation plugins.",
-    technologies: ["JavaScript", "WebAssembly", "REST API", "PHP", "WordPress Plugin Architecture", "Canvas API"],
-    liveUrl: "https://webpconverter.tech",
+    id: "client-websites-from-scratch",
+    title: "Client Web Platforms & Case Studies (Built From Scratch)",
+    category: "Client Web Platforms",
+    description: "Comprehensive portfolio of enterprise client websites, e-commerce stores, and fintech platforms architected and developed completely from scratch.",
+    longDescription: "During my tenure as a developer and agency partner at CyberZip Technology, I engineered end-to-end web applications, e-commerce storefronts, and conversion engines from scratch across 8+ vertical industries with responsive UI, custom backend logic, and technical SEO.",
+    technologies: ["PHP", "MySQL", "WordPress Core", "WooCommerce", "JavaScript", "Custom Responsive CSS", "Technical SEO"],
+    liveUrl: "https://cyberzip.in/our-work.php",
     isFeatured: true,
     status: "Completed",
     highlights: [
-      "Client-side batch image processing minimizing server overhead and upload latencies.",
-      "Dedicated REST API supporting automated programmatic image optimization pipelines.",
-      "Integrated WordPress and WooCommerce companion plugin for on-upload asset compression."
-    ]
-  },
-  {
-    id: "cyberzip-mailer",
-    title: "CyberZip Bulk Mailer",
-    category: "Automation & Python",
-    description: "High-efficiency bulk email dispatch and campaign workflow engine designed for outreach automation, tracking, and delivery reliability.",
-    longDescription: "A streamlined email campaign delivery system tailored for high-deliverability corporate outreach, featuring personalized mail merging, scheduled delivery queues, and bounce/success tracking.",
-    technologies: ["Python", "SMTP / IMAP", "Workflow Automation", "HTML Email Templates"],
-    isFeatured: false,
-    status: "Completed",
-    highlights: [
-      "Campaign delivery queues with custom throttles to protect domain reputation.",
-      "Automated merge-tag personalization and delivery status logging."
-    ]
-  },
-  {
-    id: "leads-scraper",
-    title: "Leads Scraper — B2B Prospect Workflow",
-    category: "Automation & Python",
-    description: "Targeted lead-generation scraping pipeline that extracts and structures business prospect intelligence from verified public directories.",
-    longDescription: "Built to automate manual market research and B2B sales prospect generation. Features target-based collection workflows, anti-blocking measures, and structured data exports.",
-    technologies: ["Python", "Web Scraping", "Data Normalization", "pandas", "CSV/Excel Pipelines"],
-    isFeatured: false,
-    status: "Completed",
-    highlights: [
-      "Targeted domain-specific collection algorithms for business intelligence.",
-      "Automated data cleansing, deduplication, and structured export formatting."
-    ]
-  },
-  {
-    id: "custom-wp-plugins",
-    title: "WordPress & WooCommerce Custom Tool Suite",
-    category: "WordPress Plugins",
-    description: "Suite of production plugins including WooCommerce Product Bargaining, an automated SEO Blog Writer, and dynamic asset optimizers.",
-    longDescription: "A collection of purpose-built WordPress extensions engineered to enhance e-commerce conversion rates and streamline digital publishing operations.",
-    technologies: ["PHP", "WordPress Hook System", "WooCommerce API", "MySQL", "JavaScript", "REST APIs"],
-    isFeatured: false,
-    status: "Active",
-    highlights: [
-      "WooCommerce Product Bargaining Plugin allowing dynamic customer price negotiations.",
-      "SEO Blog Writer tool facilitating automated content schema drafting and optimization.",
-      "Custom asset compression and database query optimizations."
+      "Built production web applications and e-commerce portals from scratch.",
+      "Engineered bespoke PHP/MySQL database schemas and frontend UI components.",
+      "Documented case studies with measurable traffic and business revenue growth."
     ]
   }
 ];

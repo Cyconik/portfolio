@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bargenify-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect width="100" height="100" rx="22" fill="url(#bargenify-grad)" filter="url(#shadow)" />
+  <!-- Shopping Tag / Negotiation Emblem -->
+  <path d="M 45 22 L 72 22 C 75.3 22 78 24.7 78 28 L 78 55 C 78 56.6 77.4 58.1 76.2 59.3 L 53.3 82.2 C 50.9 84.6 47.1 84.6 44.7 82.2 L 23.8 61.3 C 21.4 58.9 21.4 55.1 23.8 52.7 L 40.7 35.8 C 41.9 34.6 43.4 34 45 34 Z" fill="white" opacity="0.95" />
+  <circle cx="65" cy="35" r="4.5" fill="#059669" />
+  <!-- Bargain Symbol % / Tag -->
+  <path d="M 40 50 L 58 68 M 42 66 A 3.5 3.5 0 1 1 42 59 A 3.5 3.5 0 1 1 42 66 M 56 52 A 3.5 3.5 0 1 1 56 45 A 3.5 3.5 0 1 1 56 52" stroke="#059669" stroke-width="2.5" stroke-linecap="round" fill="none" />
+</svg>

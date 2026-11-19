@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Products } from './components/Products';
+import { FeaturedProjects } from './components/FeaturedProjects';
 import { Journey } from './components/Journey';
 import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
-import { FeaturedProjects } from './components/FeaturedProjects';
-import { Products } from './components/Products';
 import { Achievements } from './components/Achievements';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -16,7 +16,7 @@ export const App: React.FC = () => {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-navy-900 selection:bg-blue-100 selection:text-blue-900 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#F8FAFC] text-navy-900 selection:bg-blue-100 selection:text-blue-900 flex flex-col justify-between overflow-x-hidden">
       {/* Navigation */}
       <Navbar onOpenResume={() => setResumeModalOpen(true)} />
 
@@ -28,22 +28,22 @@ export const App: React.FC = () => {
         {/* 2. About Me */}
         <About />
 
-        {/* 3. My Journey */}
-        <Journey />
-
-        {/* 4. Experience */}
-        <Experience />
-
-        {/* 5. Skills & Technologies */}
-        <Skills />
-
-        {/* 6. Featured Projects */}
-        <FeaturedProjects />
-
-        {/* 7. Products & Entrepreneurship */}
+        {/* 3. Products & Entrepreneurship (Flagship: Bargenify, ScanSecure, Galigram, WebPConverter, SpillX) */}
         <Products />
 
-        {/* 8. Achievements & Education */}
+        {/* 4. Featured Projects & Tools (Universal Reblog, Element Inspector, Bulk Mailer, Leads Scraper, QuickChat, Client Works) */}
+        <FeaturedProjects />
+
+        {/* 5. My Journey Timeline */}
+        <Journey />
+
+        {/* 6. Professional Experience */}
+        <Experience />
+
+        {/* 7. Skills & Capabilities */}
+        <Skills />
+
+        {/* 8. Achievements & Formal Education */}
         <Achievements />
 
         {/* 9. Contact */}
