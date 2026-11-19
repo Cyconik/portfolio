@@ -69,14 +69,14 @@ export const Products: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1.5 sm:gap-2">
                       {isFlagship && (
-                        <span className="text-xs font-extrabold px-2.5 py-1 rounded-full bg-emerald-600 text-white shadow-sm flex items-center gap-1">
-                          <ShoppingBag className="w-3 h-3" />
+                        <span className="text-xs font-extrabold px-2.5 py-1 rounded-full bg-emerald-600 text-white shadow-sm flex items-center gap-1 w-fit">
+                          <ShoppingBag className="w-3 h-3 flex-shrink-0" />
                           <span>Flagship Innovation</span>
                         </span>
                       )}
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200/60">
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200/60 w-fit">
                         {product.status}
                       </span>
                     </div>

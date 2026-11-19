@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Printer } from 'lucide-react';
 import { profileData } from '../data/profile';
 import { experienceData } from '../data/experience';
@@ -10,6 +10,17 @@ interface ResumeModalProps {
 }
 
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('resume-modal-open');
+    } else {
+      document.body.classList.remove('resume-modal-open');
+    }
+    return () => {
+      document.body.classList.remove('resume-modal-open');
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const handlePrint = () => {
@@ -17,11 +28,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-2 sm:p-6 animate-in fade-in">
-      <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[94vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+    <div className="resume-modal-overlay fixed inset-0 z-50 overflow-y-auto bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-2 sm:p-6 animate-in fade-in">
+      <div className="resume-modal-card bg-white rounded-2xl max-w-4xl w-full max-h-[94vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
         
         {/* Modal Toolbar */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-200 bg-slate-50/90 flex-shrink-0">
+        <div className="no-print flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-200 bg-slate-50/90 flex-shrink-0">
           <div className="flex items-center gap-2 min-w-0">
             <span className="font-extrabold text-navy-900 text-xs sm:text-base truncate">
               {profileData.fullName} : Official Curriculum Vitae
@@ -50,17 +61,20 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         </div>
 
         {/* Printable & Scrollable Resume Body */}
-        <div className="overflow-y-auto p-4 sm:p-10 space-y-6 sm:space-y-8 text-slate-800 text-xs sm:text-sm leading-relaxed font-sans">
+        <div
+          id="resume-printable-area"
+          className="resume-printable-body overflow-y-auto p-4 sm:p-8 space-y-4 sm:space-y-5 text-slate-800 text-xs sm:text-sm leading-relaxed font-sans"
+        >
           
           {/* Header */}
-          <div className="text-center border-b border-slate-200 pb-5 sm:pb-6 space-y-2">
-            <h1 className="text-xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">
+          <div className="text-center border-b border-slate-200 pb-3 sm:pb-4 space-y-1.5 print-avoid-break">
+            <h1 className="text-xl sm:text-2xl font-black text-navy-900 tracking-tight">
               {profileData.fullName.toUpperCase()}
             </h1>
-            <p className="text-xs sm:text-base font-bold text-blue-800 tracking-wide">
+            <p className="text-xs sm:text-sm font-bold text-blue-800 tracking-wide">
               BUSINESS ANALYST | PRODUCT OWNER | FULL-STACK DEVELOPER
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-slate-600 font-medium pt-1">
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-600 font-medium pt-0.5">
               <a href={`mailto:${profileData.email}`} className="text-blue-700 font-semibold hover:underline">
                 {profileData.email}
               </a>
@@ -74,21 +88,21 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           </div>
 
           {/* Professional Summary */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
+          <div className="space-y-1 print-avoid-break">
+            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-0.5">
               Professional Summary
             </h2>
-            <p className="text-xs sm:text-sm text-slate-700 leading-normal">
+            <p className="text-xs text-slate-700 leading-normal">
               {profileData.shortBio} Skilled in requirement gathering, BRD/FRD, user stories, acceptance criteria, process flows, gap analysis, RTM, and UAT. Experienced in coordinating with vendors and cross-functional teams, administering CRM workflows, and translating operational needs into clear functional requirements. Combines business analysis capabilities with technical knowledge of WordPress, PHP, MySQL, APIs, Flutter, and Python. Contributed to increasing Turbo Auto Parts' organic traffic from approximately 1,570 to 17,700 monthly sessions in four months (+1,027% organic scale). Founder of Bargenify, ScanSecure, SpillX, and Galigram.
             </p>
           </div>
 
           {/* Core Skills */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
+          <div className="space-y-1.5 print-avoid-break">
+            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-0.5">
               Core Skills
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1 text-xs">
               <div>
                 <strong className="text-slate-900 block font-semibold">Business Analysis:</strong>
                 <span className="text-slate-600">Requirement Gathering, Stakeholder Management, BRD, FRD, User Stories, Acceptance Criteria, RTM, Gap Analysis, Process Flows, Wireframes, UAT, Change Requests, SDLC, Agile/Scrum</span>
@@ -117,17 +131,17 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           </div>
 
           {/* Professional Experience */}
-          <div className="space-y-4">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
+          <div className="space-y-2.5">
+            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-0.5 print-avoid-break">
               Professional Experience
             </h2>
             {experienceData.map((exp) => (
-              <div key={exp.id} className="space-y-1.5 text-xs sm:text-sm">
+              <div key={exp.id} className="space-y-1 text-xs print-avoid-break">
                 <div className="flex flex-wrap items-center justify-between font-bold text-navy-900">
                   <span>{exp.role} | {exp.company} {exp.client && `(Client: ${exp.client})`}</span>
                   <span className="text-slate-500 font-mono text-xs">{exp.period}</span>
                 </div>
-                <ul className="space-y-1 text-xs text-slate-700 pl-4 list-disc">
+                <ul className="space-y-0.5 text-xs text-slate-700 pl-4 list-disc">
                   {exp.responsibilities.map((r, idx) => (
                     <li key={idx} className="leading-snug">{r}</li>
                   ))}
@@ -137,11 +151,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           </div>
 
           {/* Ventures & Products */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
+          <div className="space-y-1.5 print-avoid-break">
+            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-0.5">
               Ventures & Built Products
             </h2>
-            <div className="space-y-2 text-xs">
+            <div className="space-y-1 text-xs">
               <div>
                 <strong className="text-slate-900 font-bold">Bargenify (bargenify.com) : Founder & Architect:</strong>
                 <span className="text-slate-700 ml-1">India's 1st online bargaining platform. Developing plugin & API infrastructure for e-commerce shop owners to enable real-time price negotiations.</span>
@@ -170,11 +184,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           </div>
 
           {/* Education */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
+          <div className="space-y-1.5 print-avoid-break">
+            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-0.5">
               Education
             </h2>
-            <div className="space-y-1.5 text-xs">
+            <div className="space-y-1 text-xs">
               {educationData.map((edu, idx) => (
                 <div key={idx} className="flex justify-between items-start">
                   <div>
@@ -191,11 +205,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           </div>
 
           {/* Awards & Recognition */}
-          <div className="space-y-2">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-1">
+          <div className="space-y-1 print-avoid-break">
+            <h2 className="text-xs font-extrabold uppercase tracking-wider text-navy-900 border-b border-slate-200 pb-0.5">
               Awards & Recognition
             </h2>
-            <ul className="text-xs text-slate-700 space-y-1 list-disc pl-4">
+            <ul className="text-xs text-slate-700 space-y-0.5 list-disc pl-4">
               <li><strong>Mahindra All India Talent Scholarship</strong>: recognized for academic excellence and technical potential.</li>
               <li><strong>Appreciation Letter, Krinvi Technologies</strong>: received within two months of joining for high performance.</li>
             </ul>
