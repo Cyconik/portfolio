@@ -21,8 +21,8 @@ export const productsData: ProductItem[] = [
     id: "bargenify",
     name: "Bargenify",
     role: "Founder & Lead Architect",
-    tagline: "India's 1st Online Bargaining Platform — Digital Price Negotiation Plugin & API",
-    description: "India's pioneering digital bargaining ecosystem. Building dedicated plugins and developer APIs for e-commerce shop owners that empower customers to negotiate and bargain product prices in real-time—digitizing India's retail bargaining culture to dramatically reduce cart abandonment.",
+    tagline: "India's 1st Online Bargaining Platform: Digital Price Negotiation Plugin & API",
+    description: "India's pioneering digital bargaining ecosystem. Building dedicated plugins and developer APIs for e-commerce shop owners that empower customers to negotiate and bargain product prices in real-time, digitizing India's retail bargaining culture to dramatically reduce cart abandonment.",
     domain: "bargenify.com",
     liveUrl: "https://bargenify.com",
     status: "Active Development (Flagship)",
@@ -35,7 +35,7 @@ export const productsData: ProductItem[] = [
       "Automated Counter-Offer Engine: Algorithmic real-time negotiation that protects seller profits while rewarding buyers.",
       "Cart Abandonment Conversion: Captures high-intent users on the fence by providing immediate interactive price discovery."
     ],
-    businessValue: "Transforms static checkout friction into interactive gamified negotiation, boosting store conversion rates by an estimated 25%–40% and slashing ad spend waste.",
+    businessValue: "Transforms static checkout friction into interactive gamified negotiation, boosting store conversion rates by an estimated 25% to 40% and slashing ad spend waste.",
     technologies: ["Custom Plugin Architecture", "RESTful API Engine", "E-Commerce Integrations", "Real-Time Negotiation Logic", "WooCommerce/Shopify APIs"],
     metricsOrLaunch: "Flagship Venture in active development"
   },
@@ -44,7 +44,7 @@ export const productsData: ProductItem[] = [
     name: "ScanSecure",
     role: "Founder",
     tagline: "India's #1 Emergency Smart Card with Dynamic Medical QR & Instant Contacts",
-    description: "An emergency smart-card platform utilizing QR-enabled PVC cards to make vital medical profile details and emergency contacts immediately accessible from any modern smartphone—without requiring an app download, user login, or unlocked device.",
+    description: "An emergency smart-card platform utilizing QR-enabled PVC cards to make vital medical profile details and emergency contacts immediately accessible from any modern smartphone, without requiring an app download, user login, or unlocked device.",
     domain: "scansecure.in",
     liveUrl: "https://scansecure.in",
     status: "Live & Active",
@@ -56,7 +56,7 @@ export const productsData: ProductItem[] = [
       "Physical-to-Digital Pairing: Encrypted dynamic QR codes permanently mapped to secure, user-managed medical profiles.",
       "Instant Emergency Contacts: Direct 1-tap calling for primary emergency contacts and blood group verification."
     ],
-    businessValue: "Solves the critical 'golden hour' information gap for first responders, emergency medical personnel, and bystanders during accidents or medical crises.",
+    businessValue: "Solves the critical golden hour information gap for first responders, emergency medical personnel, and bystanders during accidents or medical crises.",
     technologies: ["Dynamic QR Infrastructure", "Web Architecture", "User Journey Engineering", "Security Protocols", "Physical Card Logistics"],
     metricsOrLaunch: "Live Platform across individual and institutional use cases"
   },
@@ -85,7 +85,7 @@ export const productsData: ProductItem[] = [
     id: "webpconverter",
     name: "WebPConverter.tech",
     role: "Creator & Architect",
-    tagline: "Real-Time Image Compression — Reduces Up to 90% File Size with Zero Quality Loss",
+    tagline: "Real-Time Image Compression: Reduces Up to 90% File Size with Zero Quality Loss",
     description: "A high-performance image optimization platform that converts images to modern WebP format and reduces file size by up to 90% without compromising visual quality, complete with developer REST APIs and WordPress plugins.",
     domain: "webpconverter.tech",
     liveUrl: "https://webpconverter.tech",

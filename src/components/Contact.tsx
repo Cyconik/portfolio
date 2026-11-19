@@ -114,17 +114,20 @@ export const Contact: React.FC = () => {
                   </button>
                 </div>
 
-                {/* Location */}
-                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
-                  <div className="w-10 h-10 rounded-lg bg-slate-200/80 text-slate-700 flex items-center justify-center flex-shrink-0">
+                {/* Location with Open to Relocate */}
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
+                  <div className="w-10 h-10 rounded-lg bg-slate-200/80 text-slate-700 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block">
-                      Work Location
+                      Location & Relocation
                     </span>
-                    <span className="text-xs sm:text-sm font-bold text-navy-900">
-                      {profileData.location} (Open for Remote & Onsite)
+                    <span className="text-xs sm:text-sm font-bold text-navy-900 block">
+                      Noida, Uttar Pradesh, India
+                    </span>
+                    <span className="inline-block mt-1 text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">
+                      Open to Relocate Anywhere (Remote & Onsite)
                     </span>
                   </div>
                 </div>
@@ -133,7 +136,7 @@ export const Contact: React.FC = () => {
                 <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-50 border border-slate-200/60">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-navy-900 text-white flex items-center justify-center flex-shrink-0">
-                      <GithubIcon className="w-5 h-5" />
+                      <GithubIcon className="w-4 h-4" />
                     </div>
                     <div>
                       <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block">
@@ -160,7 +163,7 @@ export const Contact: React.FC = () => {
               <div className="p-4 rounded-xl bg-emerald-50/80 border border-emerald-200 text-xs text-emerald-950 space-y-1">
                 <span className="font-bold block">For Founders, Executives & Recruiters:</span>
                 <p className="text-emerald-900/90 leading-relaxed">
-                  Looking to hire a high-ownership Business Analyst, Product Owner, or Senior Technical Specialist? Messages submitted here arrive directly in my primary inbox: <strong>{profileData.email}</strong>.
+                  Looking to hire or sponsor a high-ownership Business Analyst, Product Owner, or Senior Technical Specialist? Messages submitted here arrive directly in my primary inbox: <strong>{profileData.email}</strong>.
                 </p>
               </div>
 
@@ -236,7 +239,7 @@ export const Contact: React.FC = () => {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="e.g. Business Analyst / Product Owner Opportunity or Partnership"
+                      placeholder="e.g. Business Analyst / Product Owner Opportunity or Sponsorship"
                       className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 bg-slate-50/50"
                     />
                   </div>
@@ -250,7 +253,7 @@ export const Contact: React.FC = () => {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Share role scope, project vision, or collaboration inquiry..."
+                      placeholder="Share role scope, sponsorship details, or collaboration inquiry..."
                       className="w-full px-3.5 py-2.5 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 bg-slate-50/50 resize-y"
                     />
                   </div>

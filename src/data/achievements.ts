@@ -64,9 +64,9 @@ export const achievementsData: AchievementItem[] = [
 
 export const educationData: EducationItem[] = [
   {
-    degree: "Bachelor of Technology (B.Tech) — Computer Science and Engineering",
+    degree: "Bachelor of Technology (B.Tech) in Computer Science and Engineering",
     institution: "Dr. APJ Abdul Kalam Technical University (AKTU)",
-    period: "2022 – 2025",
+    period: "2022 - 2025",
     score: "7.03",
     scoreType: "CGPA",
     location: "Lucknow, Uttar Pradesh, India",
@@ -76,9 +76,9 @@ export const educationData: EducationItem[] = [
     ]
   },
   {
-    degree: "Diploma — Aircraft Maintenance Engineering (AME)",
+    degree: "Diploma in Aircraft Maintenance Engineering (AME)",
     institution: "Board of Technical Education, Uttar Pradesh (BTEUP)",
-    period: "2018 – 2021",
+    period: "2018 - 2021",
     score: "80%",
     scoreType: "Percentage",
     location: "Uttar Pradesh, India",

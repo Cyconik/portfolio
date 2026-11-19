@@ -24,7 +24,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-200 bg-slate-50/90 flex-shrink-0">
           <div className="flex items-center gap-2 min-w-0">
             <span className="font-extrabold text-navy-900 text-xs sm:text-base truncate">
-              {profileData.fullName} — Official Curriculum Vitae
+              {profileData.fullName} : Official Curriculum Vitae
             </span>
             <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold flex-shrink-0">
               Verified 2026
@@ -143,23 +143,23 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </h2>
             <div className="space-y-2 text-xs">
               <div>
-                <strong className="text-slate-900 font-bold">Bargenify (bargenify.com) — Founder & Architect:</strong>
+                <strong className="text-slate-900 font-bold">Bargenify (bargenify.com) : Founder & Architect:</strong>
                 <span className="text-slate-700 ml-1">India's 1st online bargaining platform. Developing plugin & API infrastructure for e-commerce shop owners to enable real-time price negotiations.</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-bold">ScanSecure (scansecure.in) — Founder:</strong>
+                <strong className="text-slate-900 font-bold">ScanSecure (scansecure.in) : Founder:</strong>
                 <span className="text-slate-700 ml-1">Emergency smart-card platform using a QR-enabled PVC card to make vital emergency information and contacts accessible from any phone without an app or login.</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-bold">Galigram (galigram.com) — Founder:</strong>
+                <strong className="text-slate-900 font-bold">Galigram (galigram.com) : Founder:</strong>
                 <span className="text-slate-700 ml-1">Location-aware social platform for concise 30-second hyper-local video reports and community updates (under process).</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-bold">WebPConverter.tech — Creator:</strong>
+                <strong className="text-slate-900 font-bold">WebPConverter.tech : Creator:</strong>
                 <span className="text-slate-700 ml-1">Batch image conversion and compression platform that reduces file sizes by up to 90% without losing quality, with REST API and WP plugin.</span>
               </div>
               <div>
-                <strong className="text-slate-900 font-bold">SpillX (spillx.in) — Founder:</strong>
+                <strong className="text-slate-900 font-bold">SpillX (spillx.in) : Founder:</strong>
                 <span className="text-slate-700 ml-1">Anonymous social expression platform for text confessions, reactions, and private one-to-one discussions.</span>
               </div>
               <div>
@@ -196,8 +196,8 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               Awards & Recognition
             </h2>
             <ul className="text-xs text-slate-700 space-y-1 list-disc pl-4">
-              <li><strong>Mahindra All India Talent Scholarship</strong> — recognized for academic excellence and technical potential.</li>
-              <li><strong>Appreciation Letter, Krinvi Technologies</strong> — received within two months of joining for high performance.</li>
+              <li><strong>Mahindra All India Talent Scholarship</strong>: recognized for academic excellence and technical potential.</li>
+              <li><strong>Appreciation Letter, Krinvi Technologies</strong>: received within two months of joining for high performance.</li>
             </ul>
           </div>
 

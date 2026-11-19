@@ -14,15 +14,39 @@ interface TimelineEvent {
 export const Journey: React.FC = () => {
   const events: TimelineEvent[] = [
     {
-      year: '2025 – Present',
+      year: 'Oct 2026 – Present',
       title: 'Founder & Architect: Bargenify.com',
       subtitle: "India's 1st Online Bargaining Platform for E-Commerce Merchants",
       organization: 'Bargenify',
       type: 'venture',
       highlights: [
-        'Architecting digital negotiation plugins and APIs for online shop owners.',
-        'Digitizing retail price bargaining to increase e-commerce conversion rates.',
+        'Initiated in October 2026: architecting digital negotiation plugins and APIs for online store owners.',
+        'Digitizing retail price bargaining to increase e-commerce checkout conversion rates.',
         'Protecting merchant profit margins through automated algorithmic threshold controls.'
+      ]
+    },
+    {
+      year: 'Sep 2026 – Present',
+      title: 'Founder: Galigram.com',
+      subtitle: 'Location-Aware Hyper-Local Social Micro-Video Network (Under Process)',
+      organization: 'Galigram',
+      type: 'venture',
+      highlights: [
+        'Initiated in September 2026: hyper-local social platform for 30-second neighborhood video updates.',
+        'Eliminating global algorithmic noise in favor of high-signal local community updates.',
+        'Location-anchored content discovery architecture currently in active development.'
+      ]
+    },
+    {
+      year: 'May 2026 – Present',
+      title: 'Founder: ScanSecure.in',
+      subtitle: "India's #1 Emergency Smart Card Platform with Dynamic Medical QR",
+      organization: 'ScanSecure',
+      type: 'venture',
+      highlights: [
+        'Launched in May 2026: QR-enabled PVC emergency medical card ecosystem with zero-app access.',
+        'Enables first responders to access vital medical data and contacts on any phone without login.',
+        'Configured physical card pairing workflows for students, elder care, and corporate teams.'
       ]
     },
     {
@@ -39,9 +63,21 @@ export const Journey: React.FC = () => {
       ]
     },
     {
+      year: 'Oct 2025',
+      title: 'Founder: SpillX.in',
+      subtitle: 'Anonymous Social Expression & Support Community',
+      organization: 'SpillX',
+      type: 'venture',
+      highlights: [
+        'Founded in October 2025: private social sanctuary for text confessions and peer emotional support.',
+        'Engineered WordPress-backed platform with safety moderation pipelines and community filters.',
+        'Designed private 1-to-1 conversation architecture and empathy indicators.'
+      ]
+    },
+    {
       year: 'Jul 2024 – Nov 2024',
       title: 'Business Analyst / WordPress Developer',
-      subtitle: 'Client: Turbo Auto Parts — Scaled organic traffic by +1,027%',
+      subtitle: 'Client: Turbo Auto Parts (Scaled organic traffic by +1,027%)',
       organization: 'Creative Tura Pvt. Ltd.',
       location: 'India',
       type: 'career',
@@ -49,19 +85,6 @@ export const Journey: React.FC = () => {
         'Authored complete BA artifacts: Project Charter, BRD, FRD, User Stories, RTM, and UAT test plans.',
         'Specified and mapped user journeys for online used engine & transmission bidding feature.',
         'Drove organic traffic from ~1,570 to 17,700 monthly sessions in 4 months (+1,027% organic scale).'
-      ]
-    },
-    {
-      year: '2023 – 2024',
-      title: 'Ventures: ScanSecure, SpillX & Galigram',
-      subtitle: 'Founder of independent digital products & emergency card ecosystem',
-      organization: 'Founder / Product Architect',
-      type: 'venture',
-      highlights: [
-        'Founded ScanSecure: QR-enabled PVC emergency medical card ecosystem with zero-app access.',
-        'Founded Galigram: Location-aware hyper-local micro-video social platform (under process).',
-        'Founded SpillX: Anonymous social confession and emotional expression community.',
-        'Created WebPConverter.tech: Slashes image payloads up to 90% without quality loss.'
       ]
     },
     {
@@ -149,7 +172,7 @@ export const Journey: React.FC = () => {
           {/* Vertical Spine: Left on mobile, center on sm+ */}
           <div className="absolute left-6 sm:left-1/2 top-4 bottom-4 w-0.5 bg-slate-200 -translate-x-1/2" />
 
-          <div className="space-y-6 sm:space-y-12">
+          <div className="space-y-6 sm:space-y-10">
             {events.map((event, idx) => {
               const isEven = idx % 2 === 0;
               return (

@@ -19,11 +19,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           {/* Top Status & Location Badge */}
           <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs sm:text-sm font-medium text-slate-700 shadow-subtle hover:border-slate-300 transition-colors max-w-full">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0" />
-            <span className="font-semibold text-navy-900">Open for Strategic Roles:</span>
+            <span className="font-bold text-navy-900">Available for Hire & Sponsorship:</span>
             <span>Business Analyst • Product Owner • Tech Lead</span>
             <span className="text-slate-300 hidden sm:inline">•</span>
-            <span className="text-slate-500 hidden sm:inline flex items-center gap-1">
-              <MapPin className="w-3 h-3 inline text-slate-400" /> Noida, India
+            <span className="text-slate-600 hidden sm:inline flex items-center gap-1 font-semibold">
+              <MapPin className="w-3.5 h-3.5 inline text-blue-600" /> Open to Relocate Anywhere
             </span>
           </div>
 
@@ -32,16 +32,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             {profileData.fullName}
           </h1>
 
-          {/* Positioning Headline */}
-          <p className="text-base sm:text-xl md:text-2xl font-bold text-slate-700 max-w-3xl mx-auto leading-snug">
+          {/* 1-Line Positioning Headline */}
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-slate-800 tracking-tight whitespace-normal sm:whitespace-nowrap">
             <span className="text-blue-700">Business Analyst</span>
-            <span className="text-slate-300 mx-1.5 sm:mx-2 font-light">|</span>
+            <span className="text-slate-400 mx-1 font-light">|</span>
             <span className="text-navy-900">Product Owner</span>
-            <span className="text-slate-300 mx-1.5 sm:mx-2 font-light">|</span>
+            <span className="text-slate-400 mx-1 font-light">|</span>
             <span className="text-emerald-700">Digital Product Builder & Founder</span>
           </p>
 
-          {/* Compelling Value Proposition */}
+          {/* Value Proposition */}
           <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             4 years of experience translating business problems into high-impact products. 
             Bridging stakeholder requirements (BRD/FRD/User Stories), CRM workflow optimization, 
@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                       </strong>
                     </div>
                     <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                      <strong>India's 1st Online Bargaining Platform</strong> — Building custom plugins & APIs for shop owners to enable real-time digital price negotiations.
+                      <strong>India's 1st Online Bargaining Platform</strong>: Building custom plugins & APIs for shop owners to enable real-time digital price negotiations.
                     </p>
                   </div>
                 </div>

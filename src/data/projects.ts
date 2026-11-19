@@ -1,7 +1,7 @@
 export interface ProjectItem {
   id: string;
   title: string;
-  category: "WordPress Plugins" | "Chrome Extensions" | "Automation & Python" | "Mobile & Systems" | "Client Web Platforms";
+  category: "WordPress Plugins" | "Chrome Extensions" | "Automation & Python" | "Mobile & Systems";
   description: string;
   longDescription: string;
   technologies: string[];
@@ -16,7 +16,7 @@ export interface ProjectItem {
 export const projectsData: ProjectItem[] = [
   {
     id: "universal-reblog",
-    title: "Universal Reblog & Republish — WordPress Plugin",
+    title: "Universal Reblog & Republish: WordPress Plugin",
     category: "WordPress Plugins",
     description: "Empowers website visitors to reblog, share, and republish articles across 9+ platforms in 1-click with automated canonical backlink attribution.",
     longDescription: "A zero-dependency WordPress plugin engineered to maximize viral content distribution. Allows readers to cross-publish articles while preserving the publisher's SEO equity through automated canonical headers and structured attribution links.",
@@ -32,7 +32,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: "element-inspector",
-    title: "Element Inspector — Chrome Extension",
+    title: "Element Inspector: Chrome Extension",
     category: "Chrome Extensions",
     description: "Lightweight browser extension for web developers and UI designers to inspect DOM elements, download high-res images, and copy text/CSS in 1-click.",
     longDescription: "Engineered to eliminate friction during frontend development, UI auditing, and design recreation. Allows developers and designers to hover over any DOM element, inspect computed styles, download asset images directly, and extract clean text or URLs.",
@@ -48,7 +48,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: "bulk-mailer",
-    title: "Bulk Mailer — 100% Free & Spam-Free Outreach Tool",
+    title: "Bulk Mailer: 100% Free & Spam-Free Outreach Tool",
     category: "Automation & Python",
     description: "Cold email outreach and campaign platform with 1-click Google Sheet sync, Gmail 16-character App Password support, and merge tags with zero limits.",
     longDescription: "A high-deliverability outreach engine designed to help founders and sales professionals launch personalized cold campaigns with zero arbitrary paywalls. Features automated mail merge, custom SMTP endpoints, Gmail App Password integration, and bounce-safe throttling.",
@@ -64,7 +64,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: "leads-scraper",
-    title: "B2B Leads Scraper — 100% Block-Free Prospecting",
+    title: "B2B Leads Scraper: 100% Block-Free Prospecting Tool",
     category: "Automation & Python",
     description: "High-speed B2B and Google Maps lead generation scraper with anti-blocking request workflows and structured data extraction.",
     longDescription: "Built to automate lead intelligence gathering without triggering anti-bot IP blocks. Uses randomized fingerprinting, intelligent request delays, and multi-field extraction to harvest verified business prospect records directly into clean spreadsheets.",
@@ -80,7 +80,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: "quickchat",
-    title: "QuickChat — 100% Offline BLE Mesh Messenger",
+    title: "QuickChat: 100% Offline BLE Mesh Messenger",
     category: "Mobile & Systems",
     description: "Decentralized, 100% offline group messenger for Android using multi-hop Bluetooth Low Energy (BLE) phone-to-phone relaying with zero internet or SIM card required.",
     longDescription: "QuickChat transforms nearby smartphones into an autonomous, decentralized communication mesh. With zero mobile data, SIM cards, or Wi-Fi required, messages broadcast across multi-hop peer nodes (Phone A -> Phone B -> Phone C -> Phone D) with local IndexedDB storage, real-time unread alerts, and group channels.",
@@ -98,7 +98,7 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: "job-auto-apply",
-    title: "Job Auto Apply — Multi-Platform Automation Engine",
+    title: "Job Auto Apply: Multi-Platform Automation Engine",
     category: "Automation & Python",
     description: "Automated job hunting and screening system that applies to filtered listings on LinkedIn, Indeed, Remotive, and Naukri with resume parsing, match scoring, and audit reports.",
     longDescription: "A Python and Streamlit automation platform designed to streamline high-volume job applications. It parses PDF/DOCX resumes, calculates match scores against job descriptions, automates form submissions using Selenium WebDriver with full screenshot audit logging, and generates automated HTML email reports with Excel exports.",
@@ -111,22 +111,6 @@ export const projectsData: ProjectItem[] = [
       "Extracts candidate skills and experience automatically from PDF and DOCX files.",
       "Captures visual screenshot proof at every application stage.",
       "Sends automated HTML email summaries with success/failure metrics."
-    ]
-  },
-  {
-    id: "client-websites-from-scratch",
-    title: "Client Web Platforms & Case Studies (Built From Scratch)",
-    category: "Client Web Platforms",
-    description: "Comprehensive portfolio of enterprise client websites, e-commerce stores, and fintech platforms architected and developed completely from scratch.",
-    longDescription: "During my tenure as a developer and agency partner at CyberZip Technology, I engineered end-to-end web applications, e-commerce storefronts, and conversion engines from scratch across 8+ vertical industries with responsive UI, custom backend logic, and technical SEO.",
-    technologies: ["PHP", "MySQL", "WordPress Core", "WooCommerce", "JavaScript", "Custom Responsive CSS", "Technical SEO"],
-    liveUrl: "https://cyberzip.in/our-work.php",
-    isFeatured: true,
-    status: "Completed",
-    highlights: [
-      "Built production web applications and e-commerce portals from scratch.",
-      "Engineered bespoke PHP/MySQL database schemas and frontend UI components.",
-      "Documented case studies with measurable traffic and business revenue growth."
     ]
   }
 ];

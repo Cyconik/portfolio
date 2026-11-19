@@ -1,4 +1,4 @@
-# Nikhil Singh — Official Professional Portfolio Website
+# Nikhil Kumar Singh: Official Professional Portfolio Website
 
 > Modern, high-performance personal portfolio and professional identity web application for **Nikhil Singh** (@Cyconik).
 > Business Analyst • Product & Operations Analyst • Software Developer • Entrepreneur
